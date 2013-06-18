@@ -165,9 +165,17 @@ public class BST {
 			// CORE LOGIC FOR NODE DELETION
 			// 1. If the node to be deleted is a leaf node, just delete it
 			if(node.getLeft() == null && node.getRight() == null) {
-				isLeftChild ? parentNode.setLeft(null) : parentNode.setRight(null);
+				if(isLeftChild) {
+					parentNode.setLeft(null);
+				} else {
+					parentNode.setRight(null);
+				}
 			} else if (node.getLeft() == null){
-				isLeftChild ? parentNode.setLeft(node.getRight()) : parentNode.setRight(node.getRight()); 
+				if(isLeftChild) {
+					parentNode.setLeft(node.getRight());
+				} else {
+					parentNode.setRight(node.getRight());
+				}
 			} else {
 				TreeNode maxElementOnLeftSubtree = getMaxNode(node.getLeft());
 				node.setInfo(maxElementOnLeftSubtree.getInfo());
