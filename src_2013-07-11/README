@@ -1,0 +1,17 @@
+- Create and check if a graph is bipartite
+- Print all possible paths from a root to leaf in a BST
+- Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number. An example is the root-to-leaf path 1->2->3 which represents the number 123. Find the total sum of all root-to-leaf numbers.
+- Given a binary tree and a sum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+- Implement strstr (KMP Algorithm)
+- Google add two large numbers
+- MSFT: T9 keyboard question, Check if it is in the dictionary
+- Merge intervals
+- Find top ten strings with the highest frequescy from a file
+- Interval Trees - and questions 
+- Implementing Set operations: http://penguin.ewu.edu/cscd320/Topic/Graph/Kruskal/Set_Union_Find.html (Page 568 in the book)
+- Implement Queue using two stacks
+- N-Queen problem
+- How to determine if 2 linked lists are merged at a common node in O(n) time
+- Given a preorder traversal construct a valid binary search tree: http://www.geeksforgeeks.org/construct-bst-from-given-preorder-traversa/
+- Construct Tree from given Inorder and Preorder traversals: http://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/ 
+- Binary search in rotated sorted array. (on-campus question)

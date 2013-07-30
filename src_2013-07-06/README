@@ -1,0 +1,114 @@
+Problem Set: http://www.glassdoor.com/Interview/Microsoft-Software-Development-Engineer-Interview-Questions-EI_IE1651.0,9_KO10,39.htm?sort.sortType=RD&sort.ascending=false
+
+Difference between heap and stack
+http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap
+
+- Given a unordered array, filter the elements that can make up an ascending sub-array without changing their order and the sub-array should be the longest one.
+http://www.youtube.com/watch?v=U-xOVWlcgmM
+
+- Remove all whitespaces from a string
+http://www.mkyong.com/java/how-to-remove-whitespace-between-string-java/
+
+- Find median of elements in 2 sorted arrays
+http://www.geeksforgeeks.org/median-of-two-sorted-arrays/
+http://www.youtube.com/watch?v=_H50Ir-Tves
+
+- Given a sum and n coins, divide the sum with the help of coins to get min num of coins
+http://www.youtube.com/watch?v=GafjS0FfAC0
+
+- [Slight variation of the coin problem above] Given a sum and n coins, find total number of ways the sum can be got using those coins.
+
+- Merge k-sorted arrays into one sorted array
+http://www.careercup.com/question?id=11268186
+
+- Find an element in a sorted (by row and column) matrix
+http://www.youtube.com/watch?v=0-rX-Wocuew
+
+- Write a function to print all paths of a binary tree to a certain depth/length.
+http://www.geeksforgeeks.org/print-nodes-at-k-distance-from-root/
+
+- Write a method to print all paths from root to leaf.
+http://stackoverflow.com/questions/14936861/print-all-root-to-leaf-paths-in-a-binary-tree
+
+- Find square root of a number:
+http://www.youtube.com/watch?v=QIkrExrhJGY
+
+- Write code for Push/Get to implement a ring buffer based on a fixed size char buffer.
+http://en.wikipedia.org/wiki/Circular_buffer
+
+- Merge two arrays without extra space.
+https://sites.google.com/site/ramprosoftcodelibrary/puzzles/merging-two-sorted-arrays-without-using-extra-space
+
+- Write code to implement a method that returns the top 10 most frequent words in a given string.
+http://stackoverflow.com/questions/10916196/give-an-efficient-algorithm-both-space-time-to-find-the-10-most-frequent-wor
+http://stackoverflow.com/questions/17541983/find-the-10-most-frequently-used-words-in-a-large-book
+
+
+- Propose an algorithm to remove duplicates in very large datset
+1. Use a HashMap/Set
+2. Use external sort: merge sort with k-way merge
+
+- What is JVM:
+  http://www.makeuseof.com/tag/java-virtual-machine-work-makeuseof-explains/
+
+- Given a NxM board, how many ways are there to go from the left-top corner to the right-bottom corner. Write code and explain your answer.
+  https://www.khanacademy.org/math/recreational-math/brain-teasers/v/path-counting-brain-teaser
+
+- Write a class that can store and interpret large integers (i.e., numbers that cannot be stored as an int). The class must be able to perform mathematical operations on the represented data.
+  Doubly Linked List
+
+- Prove that for a set of numbers that are {prime -> non-prime -> prime} (ex. 11, 12, 13) the non-prime number is always divisible by six.
+???
+
+
+
+
+
+
+
+
+
+
+
+
+- Write a class that adds or removes data from a queue
+- Max contiguous subarry sum - return the start and end indices
+- Mirror of a tree with and without modifying the original tree
+- Check if a BT is BST
+- Get Height of a Binary Tree
+- Merge two sorted arrays efficiently.
+- Detect and Remove loop in linked list.
+- Given 2 strings delete all occurances of characters in the second string from the first string.
+- Write a function to determine if a string is a Palindrome.
+- Write a function to reverse an integer (i.e. 123 = 321), with O(1) space complexity.
+- Write a function to round a float to the nearest integer (i.e. 3.14 = 3, 3.56 = 4).
+- Communication between Client/Server for a remote file system is based on a unreliable link (99% up-time but sometimes packet can be dropped).
+  The client can send request like Open, Read, Write, Seek, Close, Create, Delete to the server. How would this system deal with packet loss?
+  ACK is not allowed, so you CANNOT use a TCP like protocol.
+- Create a function to check if a binary tree is sorted
+- What are differences between Java and C?
+- What would you change about Windows?
+- What do you read to stay on top of the latest technology?
+- What are some examples of trending applications?
+- You are an owner of a building, which has a broken revolving door. What time do you replace the door?
+
+
+
+
+
+
+
+
+Non-Coding questions:
+----------------------
+
+- I am given thousands of keyboard to test before launch. Design test case to test the products before launch to market.
+- I am stuck in a meeting room. I have to predict out side temperature. No technology is available.
+- I am given eight same size balls, one ball has less weight than others, how to find the ball in two step.
+- How would you test an elevator?
+- Design a logging system for distributed application.
+- How do you test a website?
+
+
+
+

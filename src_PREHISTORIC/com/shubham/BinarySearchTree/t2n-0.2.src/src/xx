@@ -1,0 +1,137 @@
+25c25
+<  * nature   : Classe dérivée de UsbHandle, spécialement dédiée à la brique nxt.
+---
+>  * nature   : Classe dï¿½rivï¿½e de UsbHandle, spï¿½cialement dï¿½diï¿½e ï¿½ la brique nxt.
+44,45c44,46
+< //Les codes connus et exploités ... 
+< #define NXT_WRITE_EP 0x01
+---
+> //Les codes connus et exploitï¿½s ... 
+> #define NXT_WRITE_EP 0x01 
+> // ??? 0x83 
+46a48
+> // ???
+47a50
+> // ???
+48a52
+> // ???
+60c64,66
+< #define OPEN_WRITE 0x8B
+---
+> #define OPEN_WRITEDATA 0x8B
+> #define OPEN_WRITELINEAR 0x89
+> #define OPEN_WRITE 0x81
+62c68
+< // Pour récupérer proprement
+---
+> // Pour rï¿½cupï¿½rer proprement
+106c112
+< 	// on récupère 3 chars, 1 short = 5 bytes
+---
+> 	// on rï¿½cupï¿½re 3 chars, 1 short = 5 bytes
+137c143
+< 	// on récupère 3 + 4 bytes = 7
+---
+> 	// on rï¿½cupï¿½re 3 + 4 bytes = 7
+192c198
+< //utile : récupère un descripteur de fichier
+---
+> //utile : rï¿½cupï¿½re un descripteur de fichier
+203c209
+< 	// on récupère les 3 bytes habituels ...
+---
+> 	// on rï¿½cupï¿½re les 3 bytes habituels ...
+275,276c281,282
+< 	// Un peu bourrin, mais évite de faire appel
+< 	// à des lib systèmes (portage vers windows) 
+---
+> 	// Un peu bourrin, mais ï¿½vite de faire appel
+> 	// ï¿½ des lib systï¿½mes (portage vers windows) 
+281c287
+< 	//on lit à fond la caisse ... 
+---
+> 	//on lit ï¿½ fond la caisse ... 
+431c437
+< 	// Vérif du nom
+---
+> 	// Verif du nom
+440,443c446,447
+< 	if(strcmp(ext, ".rxe")){
+< 		_usbnxt_error.set("upload: .rxe extention required");
+< 		return -1;	
+< 	}
+---
+> 	 
+> 		
+456a461,502
+> 	
+> 		//----
+> 		//Verification de l'extension et 
+> 		// Ouverture de la session d'ï¿½criture
+> 		// !! c'est le basename qui donne le nom local !!
+> 		// sc + ow + bname (20) + fsz (4)
+> 		//----
+> 	if(strcmp(ext, ".rso")) //son
+> 	{
+> 		res = send( "UsbNxt::upload (open)",
+> 			InC(SYSTEM_COMMAND),
+> 			InC(OPEN_WRITE),
+> 			InNTS(20, bname),
+> 			InL(fsize)
+> 		);
+> 		if (res) return _fails(fmsg);
+> 	}
+> 	else if(strcmp(ext, ".rxe") && strcmp(ext, ".ric")) //programme et graphique
+> 	{
+> 		res = send( "UsbNxt::upload (open)",
+> 			InC(SYSTEM_COMMAND),
+> 			InC(OPEN_WRITELINEAR),
+> 			InNTS(20, bname),
+> 			InL(fsize)
+> 		);
+> 		if (res) return _fails(fmsg);
+> 	}
+> 	else if(strcmp(ext, ".txt") && strcmp(ext, ".dat"))
+> 	{
+> 		res = send( "UsbNxt::upload (open)",
+> 			InC(SYSTEM_COMMAND),
+> 			InC(OPEN_WRITEDATA),
+> 			InNTS(20, bname),
+> 			InL(fsize)
+> 		);
+> 		if (res) return _fails(fmsg);
+> 	}
+> 	else
+> 	{
+> 		_usbnxt_error.set("upload: bad extention");
+> 		return -1;		
+> 	}	
+458,470d503
+< 	//----
+< 	// Ouverture de la session d'écriture
+< 	// !! c'est le basename qui donne le nom local !!
+< 	// sc + ow + bname (20) + fsz (4)
+< 	//----
+< 
+< 	res = send( "UsbNxt::upload (open)",
+< 		InC(SYSTEM_COMMAND),
+< 		InC(OPEN_WRITE),
+< 		InNTS(20, bname),
+< 		InL(fsize)
+< 	);
+< 	if (res) return _fails(fmsg);
+488c521
+< 	// max buff -3 bytes de début
+---
+> 	// max buff -3 bytes de dï¿½but
+534a568,569
+> 	
+> 	
+572c607
+< 		printf ("TROUVÉ !!!\n");
+---
+> 		printf ("TROUVï¿½ !!!\n");
+574c609
+< 		printf ("pas trouvé ...\n");
+---
+> 		printf ("pas trouvï¿½ ...\n");

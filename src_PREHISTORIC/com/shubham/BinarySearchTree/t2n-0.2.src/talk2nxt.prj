@@ -1,0 +1,59 @@
+;; -*- Prcs -*-
+(Created-By-Prcs-Version 1 3 3)
+(Project-Description "")
+(Project-Version talk2nxt 0 2)
+(Parent-Version talk2nxt 0 1)
+(Version-Log "")
+(New-Version-Log "")
+(Checkin-Time "Mon, 25 Feb 2008 18:07:56 +0100")
+(Checkin-Login raymond)
+(Populate-Ignore (
+"obj*"
+"*.swp"
+))
+(Project-Keywords)
+(Files
+;; This is a comment.  Fill in files here.
+;; For example:  (prcs/checkout.cc ())
+
+;; Files added by populate at Wed, 07 Mar 2007 11:07:51 +0100,
+;; to version 0.0(w), by raymond:
+
+  (src/Makefile (talk2nxt/0_Makefile 1.2 644))
+  (src/usbscan.c (talk2nxt/1_usbscan.c 1.1 644))
+  (src/usbnxt.h (talk2nxt/2_usbnxt.h 1.2 644))
+  (src/usbmisc.h (talk2nxt/3_usbmisc.h 1.1 644))
+  (src/ezargs.h (talk2nxt/4_ezargs.h 1.1 644))
+  (src/errors.h (talk2nxt/5_errors.h 1.2 644))
+  (src/errormng.h (talk2nxt/6_errormng.h 1.1 644))
+  (src/usbnxt.cc (talk2nxt/7_usbnxt.cc 1.2 644))
+  (src/usbmisc.cc (talk2nxt/8_usbmisc.cc 1.1 644))
+  (src/ezargs.cc (talk2nxt/9_ezargs.cc 1.1 644))
+  (src/errors.cc (talk2nxt/10_errors.cc 1.2 644))
+  (src/errormng.cc (talk2nxt/11_errormng.c 1.1 644))
+  (hotplug/lego_usb.usermap (talk2nxt/12_lego_usb.u 1.1 644))
+  (hotplug/lego_usb.sh (talk2nxt/13_lego_usb.s 1.2 755))
+  (Makefile (src/Makefile) :symlink)
+  (ALIRE (talk2nxt/14_ALIRE 1.2 644))
+
+;; Files added by populate at Wed, 21 Nov 2007 16:09:02 +0100,
+;; to version 0.0(w), by raymond:
+
+  (COPYING (talk2nxt/15_COPYING 1.1 644))
+  (AFAIRE (talk2nxt/16_AFAIRE 1.1 644))
+  (COPYING.LESSER (talk2nxt/17_COPYING.LE 1.1 644))
+  (test/out42.nxc (talk2nxt/18_out42.nxc 1.1 644))
+  (test/t.c (talk2nxt/19_t.c 1.1 644))
+  (test/toto.rxe (talk2nxt/20_toto.rxe 1.1 644) :no-keywords)
+  (test/out42.rxe (talk2nxt/21_out42.rxe 1.1 644) :no-keywords)
+  (test/out42.orig.rxe (talk2nxt/22_out42.orig 1.1 644) :no-keywords)
+
+;; Files added by populate at Mon, 25 Feb 2008 18:06:14 +0100,
+;; to version 0.1(w), by raymond:
+
+  (src/t2n.cc (talk2nxt/23_t2n.cc 1.1 644))
+  (README (talk2nxt/24_README 1.1 644))
+  (PROBLEMES (talk2nxt/25_PROBLEMES 1.1 644))
+)
+(Merge-Parents)
+(New-Merge-Parents)
