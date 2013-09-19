@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 
@@ -7,9 +9,9 @@ import java.util.Stack;
  *
  */
 public class PrintBoundary {
-	
+
 	public static void main(String[] args) {
-		
+
 		Node1 root = new Node1(1);
 		Node1 two = new Node1(2);
 		Node1 three = new Node1(3);
@@ -18,7 +20,7 @@ public class PrintBoundary {
 		Node1 six = new Node1(6);
 		Node1 seven = new Node1(7);
 		Node1 eight = new Node1(8);
-		
+
 		root.left = two;
 		root.right = three;
 		two.left = four;
@@ -26,11 +28,78 @@ public class PrintBoundary {
 		three.left = six;
 		three.right = seven;
 		five.left = eight;
-		
-		printOutsidesOfBinaryTree(root);
-		
+
+		System.out.println("-----------");
+		System.out.println(pathSum(root, 7));
 	}
-	
+
+	/*
+	 * Print all root to leaf paths in a binary tree
+	 */
+	public static void printRootToLeaf(Node1 root, List<Integer> list) {
+		if(root == null) {
+			return;
+		}
+
+		list.add(root.data);
+
+		if(root.left == null && root.right == null) {
+			System.out.println(list);
+			return;
+		}
+
+		List<Integer> listLeft = new ArrayList<Integer>();
+		listLeft.addAll(list);
+		List<Integer> listRight = new ArrayList<Integer>();
+		listRight.addAll(list);
+		printRootToLeaf(root.left, listLeft);
+		printRootToLeaf(root.right, listRight);
+
+	}
+
+	/*
+	 * Print all paths that sum to 'sum'
+	 */
+	public static void printPathWithGivenSum(Node1 root, int sum, List<Integer> list) {
+
+		if(root == null) {
+			return;
+		}
+
+		list.add(root.data);
+
+		if(root.left == null && root.right == null) {
+			if(sum == root.data) {
+				System.out.println(list);
+			}
+			return;
+		}
+
+		List<Integer> listLeft = new ArrayList<Integer>();
+		listLeft.addAll(list);
+		List<Integer> listRight = new ArrayList<Integer>();
+		listRight.addAll(list);
+		printRootToLeaf(root.left, listLeft);
+		printRootToLeaf(root.right, listRight);
+	}
+
+	/*
+	 * Check if a path in BST has sum 'sum'
+	 */
+	public static boolean pathSum(Node1 root, int sum) {
+
+		if(root == null || sum == 0) {
+			return (sum == 0);
+		}
+
+		else {
+			sum = sum - root.data;
+			return pathSum(root.left, sum) || pathSum(root.right, sum);
+
+		}
+	}
+
+
 	/**
 	 * Prints boundary nodes of a binary tree
 	 * @param root - the root node
@@ -83,13 +152,13 @@ class Node1 {
 	@Override
 	public String toString() {
 		return "Node1 [data=" + data + ", left=" + left + ", right=" + right
-				+ "]";
+		+ "]";
 	}
 
 	int data;
 	Node1 left;
 	Node1 right;
-	
+
 	public int getData() {
 		return data;
 	}
