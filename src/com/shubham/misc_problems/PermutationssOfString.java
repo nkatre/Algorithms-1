@@ -2,7 +2,7 @@ package com.shubham.misc_problems;
 
 import java.util.List;
 
-public class PermutationsOfString {
+public class PermutationssOfString {
 	void permute(String prefix, String str) {
 		if(str.length() == 0) {
 			System.out.println(prefix);
@@ -14,7 +14,7 @@ public class PermutationsOfString {
 	}
 	
 	public static void main(String[] args) {
-		PermutationsOfString obj = new PermutationsOfString();
-		obj.permute("", "AB");
+		PermutationssOfString obj = new PermutationssOfString();
+		obj.permute("", "ABCD");
 	}
 }
