@@ -59,10 +59,10 @@ public class Yelp {
   // CLI
   public static void main(String[] args) {
     // Update tokens here from Yelp developers site, Manage API access.
-    String consumerKey = "1q8hPyWy5UUS5jhGU-uuTw";
-    String consumerSecret = "3dMDDCVKtn6gsKgPfQTg2CPV0hE";
-    String token = "4I-CByb0aZq-vhOZU-IxiegvBMHa_YKz";
-    String tokenSecret = "O2s-rUWr3smo_tGQkiQrN24vGyk";
+    String consumerKey = "XXXXXXXXX";
+    String consumerSecret = "XXXXXXXXX";
+    String token = "XXXXXXXXX";
+    String tokenSecret = "XXXXXXXXX";
 
     Yelp yelp = new Yelp(consumerKey, consumerSecret, token, tokenSecret);
     String response = yelp.search("burritto", 47.621, -122.3331);
